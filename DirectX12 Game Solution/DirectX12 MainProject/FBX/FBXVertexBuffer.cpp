@@ -1,3 +1,4 @@
+#include "FBXMain.h"
 #include "FBXVertexBuffer.h"
 
 FBXVertexBuffer::~FBXVertexBuffer()

@@ -1,8 +1,7 @@
-
+#include "FBXMain.h"
 #include "FBXConstantbuffer.h"
 
-#include "Base/pch.h"
-#include "Base/dxtk.h"
+
 
 FBXConstantBuffer::~FBXConstantBuffer()
 {
@@ -47,7 +46,7 @@ void FBXConstantBuffer::Init(int size, void* srcData)
 
 }
 
-void FBXConstantBuffer::RegistConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle,int bufferNo)
+void FBXConstantBuffer::ReConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle,int bufferNo)
 {
 	//D3Dデバイスを取得。
 	D3D12_CONSTANT_BUFFER_VIEW_DESC desc = {};
@@ -56,10 +55,10 @@ void FBXConstantBuffer::RegistConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE des
 	DXTK->Device->CreateConstantBufferView(&desc, descriptorHandle);
 }
 
-void FBXConstantBuffer::RegistConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle)
+void FBXConstantBuffer::ReConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle)
 {
 	auto backBufferIndex = DXTK->GetBackBufferIndex();
-	RegistConstantBufferView(descriptorHandle, backBufferIndex);
+	ReConstantBufferView(descriptorHandle, backBufferIndex);
 }
 
 void FBXConstantBuffer::CopyToVRAM(void* data)

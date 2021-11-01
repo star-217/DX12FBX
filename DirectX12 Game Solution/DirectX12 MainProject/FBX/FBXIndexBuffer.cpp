@@ -1,7 +1,5 @@
+#include "FBXMain.h"
 #include "FBXIndexBuffer.h"
-
-#include "Base/pch.h"
-#include "Base/dxtk.h"
 
 FBXIndexBuffer::~FBXIndexBuffer()
 {

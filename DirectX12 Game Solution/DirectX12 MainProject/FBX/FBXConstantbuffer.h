@@ -31,8 +31,8 @@ public:
 		CopyToVRAM(&data);
 	}
 
-	void RegistConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle);
-	void RegistConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle, int bufferNo);
+	void ReConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle);
+	void ReConstantBufferView(D3D12_CPU_DESCRIPTOR_HANDLE descriptorHandle, int bufferNo);
 
 private:
 	ID3D12Resource* m_constantBuffer[2] = { nullptr };//定数バッファ。
