@@ -22,9 +22,9 @@ private:
 	int m_numUavResource = 0;		//アンオーダーアクセスリソースの数。
 	int m_numSamplerDesc = 0;		//サンプラの数。
 	ID3D12DescriptorHeap* m_descriptorHeap[2] = { nullptr };					//ディスクリプタヒープ。
-	std::vector<FBXIShaderResource*> m_shaderResources;		//シェーダーリソース。
-	std::vector <FBXIUnorderAccessResrouce*> m_uavResoruces;	//UAVリソース。
-	std::vector <FBXConstantBuffer*> m_constantBuffers;		//定数バッファ。
+	//std::vector<FBXIShaderResource*> m_shaderResources;		//シェーダーリソース。
+	//std::vector<FBXIUnorderAccessResrouce*> m_uavResoruces;	//UAVリソース。
+	std::vector<FBXConstantBuffer*> m_constantBuffers;		//定数バッファ。
 	D3D12_SAMPLER_DESC m_samplerDescs[MAX_SAMPLER_STATE];						//サンプラステート。
 	D3D12_GPU_DESCRIPTOR_HANDLE m_cbGpuDescriptorStart[2];						//定数バッファのディスクリプタヒープの開始ハンドル。
 	D3D12_GPU_DESCRIPTOR_HANDLE m_srGpuDescriptorStart[2];						//シェーダーリソースのディスクリプタヒープの開始ハンドル。

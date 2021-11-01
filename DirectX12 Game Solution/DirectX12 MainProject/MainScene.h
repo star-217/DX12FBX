@@ -5,7 +5,7 @@
 #pragma once
 
 #include "Scene.h"
-#include <fbxsdk.h>
+#include "FBX/FBXMain.h"
 
 
 using Microsoft::WRL::ComPtr;
@@ -158,5 +158,7 @@ private:
 
 	int _numBones = 0;
 
+
+	LoadFBXFile m_FbxFile;
 
 };

@@ -36,6 +36,7 @@ void MainScene::Initialize()
 		16.0f / 9.0f,
 		1.0f, 10000.0f
 	);
+	m_FbxFile.InitModel("UnityCHanKAGURA.fbx");
 }
 
 // Allocate all memory the Direct3D and Direct2D resources.
@@ -597,24 +598,6 @@ void MainScene::CreateBone(int count,FbxMesh* pFbxMesh)
 		int iNumIndex = _clusters[i]->GetControlPointIndicesCount();//このボーンに影響を受ける頂点数
 		int* piIndex = _clusters[i]->GetControlPointIndices();
 		double* pdWeight = _clusters[i]->GetControlPointWeights();
-
-		//頂点側からインデックスをたどって、頂点サイドで整理する
-		//for (k = 0; k < iNumIndex; k++)
-		//{
-		//	for (int m = 0; m < 4; m++)//FBXやCGソフトがボーン4本以内とは限らない。5本以上の場合は、重みの大きい順に4本に絞る
-		//	{
-		//		if (pdWeight[k] > _meshData[count].vertices[piIndex[k]].boneWeight[m])
-		//		{
-		//			_meshData[count].vertices[piIndex[k]].boneIndex[m] = i;
-		//			_meshData[count].vertices[piIndex[k]].boneWeight[m] = pdWeight[k];
-		//			break;
-		//		}
-		//	}
-		//	if (piReadCount[piIndex[k]] < 3)
-		//	{
-		//		piReadCount[piIndex[k]]++;
-		//	}
-		//}
 	}
 
 	_bones.resize(_numBones);
@@ -698,31 +681,6 @@ void MainScene::LoadMaterial(FbxSurfaceMaterial* material)
 
 	_materials[material->GetName()] = entry_material;
 	_materialName.push_back(material->GetName());
-
-	//auto prop2 = material->FindProperty(FbxSurfaceMaterial::sDiffuse);
-	//FbxFileTexture* textureData = nullptr;
-
-	//int textureNum = prop.GetSrcObjectCount<FbxFileTexture>();
-	//if (textureNum > 0)
-	//{
-	//	// propからFbxFileTextureを取得
-	//	textureData = prop2.GetSrcObject<FbxFileTexture>(0);
-	//}
-	//else
-	//{
-	//	// 失敗したらマルチテクスチャの可能性を考えてFbxLayeredTextureを指定する
-	//// FbxLayeredTextureからFbxFileTextureを取得
-	//	int layerNum = prop2.GetSrcObjectCount<FbxLayeredTexture>();
-	//	if (layerNum > 0)
-	//	{
-	//		textureData = prop2.GetSrcObject<FbxFileTexture>(0);
-	//	}
-	//}
-
-	//auto filePath = textureData->GetRelativeFileName();
-	//int AS = 0;
-
-
 }
 
 void MainScene::GetTexture(FbxSurfaceMaterial* material)

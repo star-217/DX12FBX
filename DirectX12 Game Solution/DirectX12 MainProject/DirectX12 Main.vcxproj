@@ -183,7 +183,6 @@
     </FXCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\DirectX12FBX\DirectX12\DirectX12 Game Solution\DirectX12 MainProject\FBX\FBXShader.h" />
     <ClInclude Include="Base\d3dx12.h" />
     <ClInclude Include="Base\dxtk.h" />
     <ClInclude Include="Base\DXTKHelpers.h" />
@@ -193,8 +192,10 @@
     <ClInclude Include="DontDestroyOnLoad.h" />
     <ClInclude Include="FBX\FBXConstantbuffer.h" />
     <ClInclude Include="FBX\FBXDescriptorHeap.h" />
+    <ClInclude Include="FBX\FBXFile.h" />
     <ClInclude Include="FBX\FBXPipeLine.h" />
     <ClInclude Include="FBX\FBXRootSiginature.h" />
+    <ClInclude Include="FBX\FBXShader.h" />
     <ClInclude Include="FBX\FBXVertexBuffer.h" />
     <ClInclude Include="FBX\FBXIndexBuffer.h" />
     <ClInclude Include="MainScene.h" />
@@ -202,7 +203,6 @@
     <ClInclude Include="SceneFactory.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\DirectX12FBX\DirectX12\DirectX12 Game Solution\DirectX12 MainProject\FBX\FBXShader.cpp" />
     <ClCompile Include="Base\GameBase.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
@@ -217,8 +217,10 @@
     </ClCompile>
     <ClCompile Include="FBX\FBXConstantbuffer.cpp" />
     <ClCompile Include="FBX\FBXDescriptorHeap.cpp" />
+    <ClCompile Include="FBX\FBXFile.cpp" />
     <ClCompile Include="FBX\FBXPipeLine.cpp" />
     <ClCompile Include="FBX\FBXRootSiginature.cpp" />
+    <ClCompile Include="FBX\FBXShader.cpp" />
     <ClCompile Include="FBX\FBXVertexBuffer.cpp" />
     <ClCompile Include="FBX\FBXIndexBuffer.cpp" />
     <ClCompile Include="MainScene.cpp">

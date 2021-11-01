@@ -63,7 +63,10 @@
     <ClInclude Include="FBX\FBXVertexBuffer.h">
       <Filter>Base\FBX</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\DirectX12FBX\DirectX12\DirectX12 Game Solution\DirectX12 MainProject\FBX\FBXShader.h">
+    <ClInclude Include="FBX\FBXShader.h">
+      <Filter>Base\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="FBX\FBXFile.h">
       <Filter>Base\FBX</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,7 +101,10 @@
     <ClCompile Include="FBX\FBXVertexBuffer.cpp">
       <Filter>Base\FBX</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\DirectX12FBX\DirectX12\DirectX12 Game Solution\DirectX12 MainProject\FBX\FBXShader.cpp">
+    <ClCompile Include="FBX\FBXShader.cpp">
+      <Filter>Base\FBX</Filter>
+    </ClCompile>
+    <ClCompile Include="FBX\FBXFile.cpp">
       <Filter>Base\FBX</Filter>
     </ClCompile>
   </ItemGroup>
